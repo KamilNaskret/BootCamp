@@ -1,0 +1,88 @@
+@import 'reset';
+
+body{
+    min-height:100vh;
+    background-image: url(../images/pattern-bg.svg), url(../images/pattern-curve.svg),url(../images/pattern-quotes.svg);
+    background-repeat: no-repeat,no-repeat,no-repeat;
+    background-position: 100% 50%,0% 100%,10% 30%;
+    font-family: 'Inter', sans-serif;
+    font-size:32px;
+}
+.wrapper{
+    position:relative;
+    top:0;
+    left:0;
+    min-height:100vh;
+    .description{
+        position:absolute;
+        width:40%;
+        min-width:360px;
+        top:50%;
+        left:15%;
+        transform:translateY(-50%);
+        z-index:1;
+        color:hsl(240, 38%, 20%);
+        font-size:30px;
+        p{
+            opacity:0.8;
+        }
+        h2{
+            margin-top:25px;
+            font-size:20px;
+            span{
+                color:hsl(240, 18%, 77%);
+            }
+        }
+    }
+    .image{
+        position:absolute;
+        top:50%;
+        left:70%;
+        transform:translate(-50%,-50%);
+        .change{
+            position:absolute;
+            bottom:0;
+            left:15%;
+            width:70px;
+            height:40px;
+            border-radius:20px;
+            background-color:hsl(0,0%,100%);
+            box-shadow:0px 0px 12px 0px #000;
+            display:flex;
+            align-items:center;
+            justify-content: space-around;
+            img{
+                height:50%;
+                cursor:pointer;
+            }
+        }
+    }
+}
+@media (max-width:1000px){
+    body{
+        background-position: 40% 20%,100% 100%,50% 55%;
+        background-size: 70% 35%,100% 15%, 10% 5%;
+    }
+    .wrapper .image{
+        top:30%;
+        left:50%;
+        transform:translate(-50%,-50%);
+    }
+    .photo{
+        height:200px;
+        width:200px;
+    }
+    .wrapper .description{
+        top:70%;
+        left:50%;
+        transform:translate(-50%,-50%);
+        font-size:20px;
+        text-align:center;
+    }
+    .wrapper .description h2 span{
+        display:block;
+    }
+}
+.show{
+    display:none;
+}
